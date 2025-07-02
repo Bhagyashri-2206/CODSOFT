@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhagyashri Patil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-section h1 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdf7e;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+      background: url('img/task1_bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(5px);
+    }
+
+    .hero {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      animation: fadeIn 1.5s ease;
+      max-width: 600px;
+    }
+
+    .hero h2 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    /* New project List Styling */
+    .project-list {
+      list-style-type: disc;
+      text-align: left;
+      margin: 0 auto;
+      padding-left: 20px;
+      font-size: 1.1em;
+    }
+
+    .project-list li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .project-list a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .project-list a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      margin: 0 8px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero h2 {
+        font-size: 2em;
+      }
+
+      .hero p, .contact-list {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-section">
+      <h1>Bhagyashri Patil</h1>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li><strong>Food Recipe App (Flutter)</strong> – A user-friendly app to browse, search, and save recipes across categories with images and cooking steps.</li>
+        <li><strong>Portfolio Website</strong> – Personal portfolio built with HTML, CSS, and JavaScript.</li>
+        <li><strong>Bluetooth Controlled Robot Car</strong> – A mobile-controlled robot car using Bluetooth module for wireless navigation and obstacle avoidance.</li>     
+    </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Bhagyashri Patil. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
+ 
